@@ -1,0 +1,15 @@
+[project]
+name = "mlops-mm01-hm"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "clean-text>=0.7.1",
+    "joblib>=1.5.3",
+    "mypy>=1.19.1",
+    "ruff>=0.15.8",
+    "scikit-learn>=1.8.0",
+    "sentence-transformers>=5.3.0",
+    "torch>=2.11.0",
+]
