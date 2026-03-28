@@ -17,6 +17,10 @@ def welcome_root():
 def predict_sentiment(input: ze_input): 
     '''Endpoint to predict sentiment of the input text\
     Args:        input (ze_input): Input text for sentiment analysis that is provided on post request'''
+    if len(input.text.strip()) == 0: #jsut chekc in case if there was no valu provided
+        return ze_output(prediction="No text provided for classification")
+    if type(input.text) != str: #check if the input is actually a string because someone like would like to test of 1991 is still young
+        return ze_output(prediction="Invalid format of input text")
     classifier = load_classifier()
     sentence_transformer = load_sentence_transformer()
     text_embedding = sentence_transformer.encode(input.text)

@@ -17,4 +17,4 @@ def load_sentence_transformer():
 #thrwo results of classifier into dictionary and return text
 def map_prediction_to_sentiment(prediction):
     preds = {0: "negative", 1: "neutral", 2: "positive"}
-    return preds.get(prediction, "unknown")
+    return preds.get(prediction, "Not possible to classify")
